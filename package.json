@@ -1,0 +1,66 @@
+{
+	"name": "@jean/rc-dialog",
+	"private": false,
+	"version": "0.0.1",
+	"author": "Jean Baradat",
+	"license": "MIT",
+	"type": "module",
+	"main": "./dist/rc-dialog.umd.cjs",
+	"module": "./dist/rc-dialog.js",
+	"exports": {
+		".": {
+			"import": "./dist/rc-dialog.js",
+			"require": "./dist/rc-dialog.umd.cjs"
+		}
+	},
+	"scripts": {
+		"tsc:noEmit": "tsc --noEmit --project tsconfig.app.json",
+		"build": "tsc --declaration && eslint . --max-warnings=0 && vite build",
+		"lint": "eslint .",
+		"prettier:write": "prettier --write ."
+	},
+	"files": [
+		"dist",
+		"README.md",
+		"LICENSE",
+		"package.json"
+	],
+	"peerDependencies": {
+		"react": "^18.0.0",
+		"clsx": "^2.1.1",
+		"lucide-react": "^0.407.0",
+		"tailwind-merge": "^2.4.0",
+		"tailwindcss-animate": "^1.0.7",
+		"@radix-ui/react-slot": "^1.1.0",
+		"class-variance-authority": "^0.7.0"
+	},
+	"devDependencies": {
+		"@radix-ui/react-slot": "^1.1.0",
+		"class-variance-authority": "^0.7.0",
+		"clsx": "^2.1.1",
+		"lucide-react": "^0.447.0",
+		"react": "^18.0.0",
+		"tailwind-merge": "^2.5.3",
+		"tailwindcss-animate": "^1.0.7",
+		"@eslint/compat": "^1.2.0",
+		"@eslint/js": "^9.9.0",
+		"@types/node": "^22.7.5",
+		"@types/react": "^18.3.3",
+		"@vitejs/plugin-react": "^4.3.1",
+		"autoprefixer": "^10.4.20",
+		"eslint": "^9.9.0",
+		"eslint-plugin-react": "^7.37.1",
+		"eslint-plugin-react-hooks": "^5.1.0-rc.0",
+		"eslint-plugin-react-refresh": "^0.4.9",
+		"eslint-plugin-tailwindcss": "^3.17.4",
+		"globals": "^15.9.0",
+		"postcss": "^8.4.47",
+		"prettier": "^3.3.3",
+		"prettier-plugin-tailwindcss": "^0.6.8",
+		"tailwindcss": "^3.4.13",
+		"typescript": "^5.5.3",
+		"typescript-eslint": "^8.0.1",
+		"vite": "^5.4.1",
+		"vite-plugin-dts": "^4.2.3"
+	}
+}
