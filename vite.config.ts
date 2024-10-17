@@ -29,6 +29,8 @@ export default defineConfig({
 				"lucide-react",
 				"tailwind-merge",
 				"tailwindcss-animate",
+				"@radix-ui/react-slot",
+				"class-variance-authority",
 			],
 			output: {
 				globals: {
@@ -36,6 +38,9 @@ export default defineConfig({
 					clsx: "clsx",
 					"lucide-react": "lucideReact",
 					"tailwind-merge": "tailwindMerge",
+					"tailwindcss-animate": "tailwindcssAnimate",
+					"@radix-ui/react-slot": "RadixUIReactSlot",
+					"class-variance-authority": "classVarianceAuthority",
 				},
 			},
 		},

@@ -1,1 +1,3 @@
-export { MyButton } from "@/components/MyButton"
+import MyButton from "@/components/MyButton"
+
+export default MyButton
