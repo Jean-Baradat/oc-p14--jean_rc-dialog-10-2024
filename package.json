@@ -1,7 +1,7 @@
 {
 	"name": "@jean/rc-dialog",
 	"private": false,
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"author": "Jean Baradat",
 	"license": "MIT",
 	"type": "module",
@@ -17,7 +17,8 @@
 		"dev": "vite",
 		"dev:network": "vite --host",
 		"tsc:noEmit": "tsc --noEmit --project tsconfig.app.json",
-		"build": "tsc --declaration && eslint . --max-warnings=0 && vite build",
+		"build:prod": "tsc --declaration && eslint . --max-warnings=0 && vite build",
+		"build:dev": "tsc --noEmitOnError false && vite build --mode development",
 		"lint": "eslint .",
 		"prettier:write": "prettier --write ."
 	},
@@ -42,6 +43,7 @@
 		"@radix-ui/react-slot": "^1.1.0",
 		"@types/node": "^22.7.5",
 		"@types/react": "^18.3.3",
+		"@types/react-dom": "^18.3.1",
 		"@vitejs/plugin-react": "^4.3.1",
 		"autoprefixer": "^10.4.20",
 		"class-variance-authority": "^0.7.0",

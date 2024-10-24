@@ -1,3 +1,4 @@
-import MyButton from "@/components/MyButton"
+import { Dialog, DialogTrigger, DialogContent } from "@/components/Dialog"
+import handleDialog from "@/components/DialogUtils"
 
-export default MyButton
+export { Dialog, DialogTrigger, DialogContent, handleDialog }
