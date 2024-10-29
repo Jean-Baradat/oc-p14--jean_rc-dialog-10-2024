@@ -39,8 +39,8 @@ interface DialogProps {
 
 interface DialogContentProps {
 	children: React.ReactElement | React.ReactElement[]
-	titleId: string
-	descriptionId: string
+	titleId?: string
+	descriptionId?: string
 }
 
 // --------- Dialog Context ---------
@@ -138,8 +138,8 @@ const shouldAddEventHandler = (
  */
 const DialogContent = ({
 	children,
-	titleId = "",
-	descriptionId = "",
+	titleId,
+	descriptionId,
 }: DialogContentProps) => {
 	const context = useContext(DialogContext)
 
