@@ -1,6 +1,7 @@
 {
 	"name": "@jean/rc-dialog",
 	"private": false,
+	"homepage": "https://Jean-Baradat.github.io/oc-p14--jean_rc-dialog-10-2024",
 	"version": "1.0.0",
 	"author": "Jean Baradat",
 	"license": "MIT",
@@ -19,8 +20,14 @@
 		"tsc:noEmit": "tsc --noEmit --project tsconfig.app.json",
 		"build:prod": "tsc --declaration && eslint . --max-warnings=0 && vite build",
 		"build:dev": "tsc --noEmitOnError false && vite build --mode development",
+		"build:demo": "tsc --declaration && eslint . --max-warnings=0 && vite build --config vite.demo.config.js",
+		"build:demo:predeploy": "vite build --config vite.demo.config.js",
 		"lint": "eslint .",
-		"prettier:write": "prettier --write ."
+		"prettier:write": "prettier --write .",
+		"preview": "vite preview --config vite.demo.config.ts",
+		"preview:network": "vite preview --config vite.demo.config.ts --host",
+		"predeploy": "npm run build:demo:predeploy",
+		"deploy": "gh-pages -d demo"
 	},
 	"files": [
 		"dist",
@@ -55,6 +62,7 @@
 		"eslint-plugin-react-hooks": "^5.1.0-rc.0",
 		"eslint-plugin-react-refresh": "^0.4.9",
 		"eslint-plugin-tailwindcss": "^3.17.4",
+		"gh-pages": "^6.2.0",
 		"globals": "^15.9.0",
 		"lucide-react": "^0.447.0",
 		"postcss": "^8.4.47",
