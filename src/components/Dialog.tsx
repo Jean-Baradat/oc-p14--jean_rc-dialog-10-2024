@@ -18,29 +18,83 @@ type DialogContextType = {
 }
 
 interface DialogTriggerProps {
+	/**
+	 * The trigger element that will open the dialog
+	 */
 	children: React.ReactElement
+	/**
+	 * Whether to use a custom event handler instead of the default ones
+	 */
 	customEvent?: boolean
+	/**
+	 * Whether to trigger on click event
+	 */
 	onClick?: boolean
+	/**
+	 * Whether to trigger on mousedown event
+	 */
 	onMouseDown?: boolean
+	/**
+	 * Whether to trigger on mouseup event
+	 */
 	onMouseUp?: boolean
+	/**
+	 * Whether to trigger on mouseenter event
+	 */
 	onMouseEnter?: boolean
+	/**
+	 * Whether to trigger on mouseleave event
+	 */
 	onMouseLeave?: boolean
+	/**
+	 * Whether to trigger on touchstart event
+	 */
 	onTouchStart?: boolean
+	/**
+	 * Whether to trigger on touchend event
+	 */
 	onTouchEnd?: boolean
+	/**
+	 * Whether to trigger on touchmove event
+	 */
 	onTouchMove?: boolean
+	/**
+	 * Whether to trigger on focus event
+	 */
 	onFocus?: boolean
+	/**
+	 * Whether to trigger on blur event
+	 */
 	onBlur?: boolean
 }
 
 interface DialogProps {
+	/**
+	 * The dialog content components
+	 */
 	children: React.ReactElement | React.ReactElement[]
+	/**
+	 * Whether the dialog is currently open
+	 */
 	isOpen: boolean
+	/**
+	 * Function to update the open state
+	 */
 	setIsOpen: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 interface DialogContentProps {
+	/**
+	 * The content elements to be displayed in the dialog
+	 */
 	children: React.ReactElement | React.ReactElement[]
+	/**
+	 * Optional ID for the dialog title element
+	 */
 	titleId?: string
+	/**
+	 * Optional ID for the dialog description element
+	 */
 	descriptionId?: string
 }
 
@@ -53,11 +107,19 @@ const DialogContext = createContext<DialogContextType>({
 
 // --------- Dialog Core ---------
 /**
+ * A dialog component that manages its open/closed state and provides context to its children
  *
- * @param param0
- * @returns
+ * @example
+ * <Dialog isOpen={isOpen} setIsOpen={setIsOpen}>
+ *   <DialogTrigger onClick>
+ *     <button>Open Dialog</button>
+ *   </DialogTrigger>
+ *   <DialogContent>
+ *     Dialog content...
+ *   </DialogContent>
+ * </Dialog>
  */
-const Dialog = ({ children, isOpen, setIsOpen }: DialogProps) => {
+const Dialog = ({ children, isOpen, setIsOpen }: DialogProps): JSX.Element => {
 	const [hasBeenOpened, setHasBeenOpened] = useState(false)
 
 	const context = useMemo(() => {
@@ -71,11 +133,13 @@ const Dialog = ({ children, isOpen, setIsOpen }: DialogProps) => {
 		<DialogContext.Provider value={context}>{children}</DialogContext.Provider>
 	)
 }
-
 /**
+ * A trigger component that controls the opening/closing of the dialog
  *
- * @param param0
- * @returns
+ * @example
+ * <DialogTrigger onClick>
+ *   <button>Open Dialog</button>
+ * </DialogTrigger>
  */
 const DialogTrigger = ({
 	children,
@@ -116,10 +180,12 @@ const DialogTrigger = ({
 }
 
 /**
+ * Determines whether to add an event handler based on the event flag
  *
- * @param event
- * @param defaultFn
- * @returns
+ * @param event - Boolean flag indicating whether to add the event handler
+ * @param defaultFn - Default function to be executed when the event is triggered
+ *
+ * @returns The default function if event is true, undefined otherwise
  */
 const shouldAddEventHandler = (
 	event: boolean | undefined,
@@ -133,15 +199,22 @@ const shouldAddEventHandler = (
 }
 
 /**
+ * Renders the content of a dialog with a close button and backdrop
  *
- * @param param0
- * @returns
+ * @example
+ * <DialogContent
+ *   titleId="dialog-title"
+ *   descriptionId="dialog-desc"
+ * >
+ *   <h2 id="dialog-title">Dialog Title</h2>
+ *   <p id="dialog-desc">Dialog content...</p>
+ * </DialogContent>
  */
 const DialogContent = ({
 	children,
 	titleId,
 	descriptionId,
-}: DialogContentProps) => {
+}: DialogContentProps): JSX.Element => {
 	const context = useContext(DialogContext)
 
 	useEffect(() => {
