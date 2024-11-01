@@ -2,6 +2,7 @@ import {
 	cloneElement,
 	createContext,
 	useContext,
+	useEffect,
 	useMemo,
 	useState,
 } from "react"
@@ -143,6 +144,14 @@ const DialogContent = ({
 }: DialogContentProps) => {
 	const context = useContext(DialogContext)
 
+	useEffect(() => {
+		if (context.isOpen) {
+			document.body.style.overflow = "hidden"
+		} else {
+			document.body.style.overflow = "auto"
+		}
+	}, [context.isOpen])
+
 	let dialogClassName = ""
 	if (context.hasBeenOpened) {
 		dialogClassName = `jean-rc-dialog ${context.isOpen ? "jean-rc-dialog-open" : "jean-rc-dialog-closing"}`
@@ -159,7 +168,8 @@ const DialogContent = ({
 					display: context?.isOpen ? "block" : "none",
 				}}
 			></div>
-			<div
+			<dialog
+				aria-modal="true"
 				aria-labelledby={titleId}
 				aria-describedby={descriptionId}
 				className={dialogClassName}
@@ -172,7 +182,7 @@ const DialogContent = ({
 					<span className="jean-rc-sr-dialog-only">Close</span>
 				</button>
 				<section>{children}</section>
-			</div>
+			</dialog>
 		</>
 	)
 }
