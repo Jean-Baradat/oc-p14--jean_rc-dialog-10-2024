@@ -30,7 +30,6 @@ Import the necessary components and add the style:
 
 ```JSX
 import { Dialog, DialogTrigger, DialogContent } from "@jean_b/rc-dialog"
-import "@jean_b/rc-dialog/dist/style.css"
 ```
 
 Manage the open/close state of the dialog:

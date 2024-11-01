@@ -8,7 +8,14 @@ import {
 } from "react"
 import { X } from "lucide-react"
 import handleDialog from "@/components/DialogUtils"
-import "@/components/Dialog.css"
+import {
+	Backdrop,
+	CloseButton,
+	CloseIcon,
+	DialogContainer,
+	getAnimationClass,
+	VisuallyHidden,
+} from "@/components/Dialog.styles"
 
 // --------- Dialog Type ---------
 type DialogContextType = {
@@ -218,44 +225,37 @@ const DialogContent = ({
 	const context = useContext(DialogContext)
 
 	useEffect(() => {
-		if (context.isOpen) {
-			document.body.style.overflow = "hidden"
-		} else {
-			document.body.style.overflow = "auto"
-		}
+		document.body.style.overflow = context.isOpen ? "hidden" : "auto"
 	}, [context.isOpen])
 
-	let dialogClassName = ""
-	if (context.hasBeenOpened) {
-		dialogClassName = `jean-rc-dialog ${context.isOpen ? "jean-rc-dialog-open" : "jean-rc-dialog-closing"}`
-	} else {
-		dialogClassName = "jean-rc-dialog"
-	}
+	const animationClassName = useMemo(() => {
+		return getAnimationClass(context.isOpen, context.hasBeenOpened)
+	}, [context.hasBeenOpened, context.isOpen])
 
 	return (
 		<>
-			<div
-				className="jean-rc-dialog-backdrop"
+			<Backdrop
 				style={{
 					position: context?.isOpen ? "fixed" : undefined,
 					display: context?.isOpen ? "block" : "none",
 				}}
-			></div>
-			<dialog
+			/>
+			<DialogContainer
 				aria-modal="true"
 				aria-labelledby={titleId}
 				aria-describedby={descriptionId}
-				className={dialogClassName}
+				className={animationClassName}
 			>
-				<button
+				<CloseButton
 					onClick={() => handleDialog(context?.isOpen, context?.setIsOpen)}
-					className="jean-rc-dialog-close"
 				>
-					<X className="jean-rc-dialog-icon" />
-					<span className="jean-rc-sr-dialog-only">Close</span>
-				</button>
+					<CloseIcon>
+						<X />
+					</CloseIcon>
+					<VisuallyHidden>Close</VisuallyHidden>
+				</CloseButton>
 				<section>{children}</section>
-			</dialog>
+			</DialogContainer>
 		</>
 	)
 }

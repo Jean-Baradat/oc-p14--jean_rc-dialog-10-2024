@@ -34,10 +34,8 @@ SyntaxHighlighter.registerLanguage("jsx", jsx)
 
 // ----------------------------------------------------------------------------------
 const INSTALLATION = "npm i @jean_b/rc-dialog"
-const CODE1 = `
-import { Dialog, DialogTrigger, DialogContent } from "@jean_b/rc-dialog"
-import "@jean_b/rc-dialog/dist/style.css"
-`.trim()
+const CODE1 =
+	'import { Dialog, DialogTrigger, DialogContent } from "@jean_b/rc-dialog"'
 const CODE2 = "const [isOpen, setIsOpen] = useState(false)"
 const CODE3 = `
 <Dialog
@@ -114,8 +112,7 @@ import {
 	DialogTrigger,
 	DialogContent,
 	handleDialog,
-} from "@/components/Dialog"
-import "@jean_b/rc-dialog/dist/style.css"
+} from "@jean_b/rc-dialog"
 `.trim()
 // ----------------------------------------------------------------------------------
 
