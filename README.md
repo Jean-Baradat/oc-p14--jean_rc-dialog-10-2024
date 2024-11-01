@@ -8,7 +8,7 @@
 ![React 18](https://img.shields.io/badge/React-18.0.0-brightgreen)
 ![Node 20](https://img.shields.io/badge/node-20.11.0-brightgreen)
 
-![Live demo and full doc](https://jean-baradat.github.io/oc-p14--jean_rc-dialog-10-2024/)
+[Live demo and full doc](https://jean-baradat.github.io/oc-p14--jean_rc-dialog-10-2024/)
 
 </div>
 
