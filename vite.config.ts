@@ -23,24 +23,11 @@ export default defineConfig({
 			fileName: "rc-dialog",
 		},
 		rollupOptions: {
-			external: [
-				"react",
-				"clsx",
-				"lucide-react",
-				"tailwind-merge",
-				"tailwindcss-animate",
-				"@radix-ui/react-slot",
-				"class-variance-authority",
-			],
+			external: ["react", "lucide-react"],
 			output: {
 				globals: {
 					react: "React",
-					clsx: "clsx",
 					"lucide-react": "lucideReact",
-					"tailwind-merge": "tailwindMerge",
-					"tailwindcss-animate": "tailwindcssAnimate",
-					"@radix-ui/react-slot": "RadixUIReactSlot",
-					"class-variance-authority": "classVarianceAuthority",
 				},
 			},
 		},
