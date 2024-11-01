@@ -32,21 +32,14 @@ import prism from "react-syntax-highlighter/dist/esm/styles/prism/prism"
 
 SyntaxHighlighter.registerLanguage("jsx", jsx)
 
-const simpleExample1 = `
+// ----------------------------------------------------------------------------------
+const INSTALLATION = "npm i @jean/rc-dialog"
+const CODE1 = `
 import { Dialog, DialogTrigger, DialogContent } from "@jean/rc-dialog"
 import "@jean/rc-dialog/dist/style.css"
 `.trim()
-const simpleExample7 = `
-import {
-	Dialog,
-	DialogTrigger,
-	DialogContent,
-	handleDialog,
-} from "@/components/Dialog"
-import "@jean/rc-dialog/dist/style.css"
-`.trim()
-const simpleExample2 = "const [isOpen, setIsOpen] = useState(false)"
-const simpleExample3 = `
+const CODE2 = "const [isOpen, setIsOpen] = useState(false)"
+const CODE3 = `
 <Dialog
 	isOpen={isOpen}
 	setIsOpen={setIsOpen}
@@ -61,8 +54,7 @@ const simpleExample3 = `
 	</DialogContent>
 </Dialog>
 `.trim()
-const installation = "npm i @jean/rc-dialog"
-const simpleExample4 = `
+const CODE4 = `
 <Dialog
 	isOpen={isOpen}
 	setIsOpen={setIsOpen}
@@ -85,12 +77,12 @@ const simpleExample4 = `
 	</DialogContent>
 </Dialog>
 `.trim()
-const simpleExample5 = `
+const CODE5 = `
 const displayDialog = () => {
 	handleDialog(isOpen, setIsOpen)
 }
 `.trim()
-const simpleExample6 = `
+const CODE6 = `
 <Dialog
 	isOpen={isOpen}
 	setIsOpen={setIsOpen}
@@ -116,6 +108,16 @@ const simpleExample6 = `
 	</DialogContent>
 </Dialog>
 `.trim()
+const CODE7 = `
+import {
+	Dialog,
+	DialogTrigger,
+	DialogContent,
+	handleDialog,
+} from "@/components/Dialog"
+import "@jean/rc-dialog/dist/style.css"
+`.trim()
+// ----------------------------------------------------------------------------------
 
 const App = () => {
 	const [copied, setCopied] = useState("")
@@ -185,7 +187,7 @@ const App = () => {
 						<CardContent className="flex flex-row items-stretch gap-3 overflow-x-auto pt-1">
 							<div className="w-full min-w-min rounded bg-muted px-5 py-3">
 								<pre className="text-nowrap">
-									<code className="text-sm">{installation}</code>
+									<code className="text-sm">{INSTALLATION}</code>
 								</pre>
 							</div>
 							<div>
@@ -193,7 +195,7 @@ const App = () => {
 									variant="default"
 									size="icon"
 									className="size-12 h-full min-w-12"
-									onClick={() => copyToClipboard(installation, "installation")}
+									onClick={() => copyToClipboard(INSTALLATION, "installation")}
 								>
 									{copied === "installation" ? (
 										<Check className="size-4" />
@@ -227,7 +229,7 @@ const App = () => {
 											margin: 0,
 										}}
 									>
-										{simpleExample1}
+										{CODE1}
 									</SyntaxHighlighter>
 								</div>
 								<div>
@@ -235,7 +237,7 @@ const App = () => {
 										variant="default"
 										size="icon"
 										className="size-12 h-full min-w-12"
-										onClick={() => copyToClipboard(simpleExample1, "example1")}
+										onClick={() => copyToClipboard(CODE1, "example1")}
 									>
 										{copied === "example1" ? (
 											<Check className="size-4" />
@@ -259,7 +261,7 @@ const App = () => {
 											margin: 0,
 										}}
 									>
-										{simpleExample2}
+										{CODE2}
 									</SyntaxHighlighter>
 								</div>
 								<div>
@@ -267,7 +269,7 @@ const App = () => {
 										variant="default"
 										size="icon"
 										className="size-12 h-full min-w-12"
-										onClick={() => copyToClipboard(simpleExample2, "example2")}
+										onClick={() => copyToClipboard(CODE2, "example2")}
 									>
 										{copied === "example2" ? (
 											<Check className="size-4" />
@@ -291,7 +293,7 @@ const App = () => {
 											margin: 0,
 										}}
 									>
-										{simpleExample3}
+										{CODE3}
 									</SyntaxHighlighter>
 								</div>
 								<div>
@@ -299,7 +301,7 @@ const App = () => {
 										variant="default"
 										size="icon"
 										className="size-12 h-full min-w-12"
-										onClick={() => copyToClipboard(simpleExample3, "example3")}
+										onClick={() => copyToClipboard(CODE3, "example3")}
 									>
 										{copied === "example3" ? (
 											<Check className="size-4" />
@@ -392,7 +394,7 @@ const App = () => {
 																margin: 0,
 															}}
 														>
-															{simpleExample1}
+															{CODE1}
 														</SyntaxHighlighter>
 													</div>
 													<div>
@@ -400,9 +402,7 @@ const App = () => {
 															variant="default"
 															size="icon"
 															className="size-12 h-full min-w-12"
-															onClick={() =>
-																copyToClipboard(simpleExample1, "example9")
-															}
+															onClick={() => copyToClipboard(CODE1, "example9")}
 														>
 															{copied === "example9" ? (
 																<Check className="size-4" />
@@ -426,7 +426,7 @@ const App = () => {
 																margin: 0,
 															}}
 														>
-															{simpleExample2}
+															{CODE2}
 														</SyntaxHighlighter>
 													</div>
 													<div>
@@ -434,9 +434,7 @@ const App = () => {
 															variant="default"
 															size="icon"
 															className="size-12 h-full min-w-12"
-															onClick={() =>
-																copyToClipboard(simpleExample2, "example4")
-															}
+															onClick={() => copyToClipboard(CODE2, "example4")}
 														>
 															{copied === "example4" ? (
 																<Check className="size-4" />
@@ -469,7 +467,7 @@ const App = () => {
 																margin: 0,
 															}}
 														>
-															{simpleExample4}
+															{CODE4}
 														</SyntaxHighlighter>
 													</div>
 													<div>
@@ -477,9 +475,7 @@ const App = () => {
 															variant="default"
 															size="icon"
 															className="size-12 h-full min-w-12"
-															onClick={() =>
-																copyToClipboard(simpleExample4, "example5")
-															}
+															onClick={() => copyToClipboard(CODE4, "example5")}
 														>
 															{copied === "example5" ? (
 																<Check className="size-4" />
@@ -585,7 +581,7 @@ const App = () => {
 																margin: 0,
 															}}
 														>
-															{simpleExample7}
+															{CODE7}
 														</SyntaxHighlighter>
 													</div>
 													<div>
@@ -594,7 +590,7 @@ const App = () => {
 															size="icon"
 															className="size-12 h-full min-w-12"
 															onClick={() =>
-																copyToClipboard(simpleExample7, "example10")
+																copyToClipboard(CODE7, "example10")
 															}
 														>
 															{copied === "example10" ? (
@@ -619,7 +615,7 @@ const App = () => {
 																margin: 0,
 															}}
 														>
-															{simpleExample2}
+															{CODE2}
 														</SyntaxHighlighter>
 													</div>
 													<div>
@@ -627,9 +623,7 @@ const App = () => {
 															variant="default"
 															size="icon"
 															className="size-12 h-full min-w-12"
-															onClick={() =>
-																copyToClipboard(simpleExample2, "example6")
-															}
+															onClick={() => copyToClipboard(CODE2, "example6")}
 														>
 															{copied === "example6" ? (
 																<Check className="size-4" />
@@ -653,7 +647,7 @@ const App = () => {
 																margin: 0,
 															}}
 														>
-															{simpleExample5}
+															{CODE5}
 														</SyntaxHighlighter>
 													</div>
 													<div>
@@ -661,9 +655,7 @@ const App = () => {
 															variant="default"
 															size="icon"
 															className="size-12 h-full min-w-12"
-															onClick={() =>
-																copyToClipboard(simpleExample5, "example7")
-															}
+															onClick={() => copyToClipboard(CODE5, "example7")}
 														>
 															{copied === "example7" ? (
 																<Check className="size-4" />
@@ -697,7 +689,7 @@ const App = () => {
 																margin: 0,
 															}}
 														>
-															{simpleExample6}
+															{CODE6}
 														</SyntaxHighlighter>
 													</div>
 													<div>
@@ -705,9 +697,7 @@ const App = () => {
 															variant="default"
 															size="icon"
 															className="size-12 h-full min-w-12"
-															onClick={() =>
-																copyToClipboard(simpleExample6, "example8")
-															}
+															onClick={() => copyToClipboard(CODE6, "example8")}
 														>
 															{copied === "example8" ? (
 																<Check className="size-4" />
@@ -955,7 +945,7 @@ const App = () => {
 								<TableBody>
 									<TableRow>
 										<TableCell className="font-medium">handleDialog</TableCell>
-										<TableCell>isOpen / setIsOpen</TableCell>
+										<TableCell>isOpen, setIsOpen</TableCell>
 										<TableCell>
 											The utility function used to toggle the open/close state
 											of the dialog
