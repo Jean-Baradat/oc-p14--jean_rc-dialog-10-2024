@@ -33,10 +33,10 @@ import prism from "react-syntax-highlighter/dist/esm/styles/prism/prism"
 SyntaxHighlighter.registerLanguage("jsx", jsx)
 
 // ----------------------------------------------------------------------------------
-const INSTALLATION = "npm i @jean/rc-dialog"
+const INSTALLATION = "npm i @jean_b/rc-dialog"
 const CODE1 = `
-import { Dialog, DialogTrigger, DialogContent } from "@jean/rc-dialog"
-import "@jean/rc-dialog/dist/style.css"
+import { Dialog, DialogTrigger, DialogContent } from "@jean_b/rc-dialog"
+import "@jean_b/rc-dialog/dist/style.css"
 `.trim()
 const CODE2 = "const [isOpen, setIsOpen] = useState(false)"
 const CODE3 = `
@@ -115,7 +115,7 @@ import {
 	DialogContent,
 	handleDialog,
 } from "@/components/Dialog"
-import "@jean/rc-dialog/dist/style.css"
+import "@jean_b/rc-dialog/dist/style.css"
 `.trim()
 // ----------------------------------------------------------------------------------
 

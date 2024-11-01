@@ -21,7 +21,7 @@ Dialog React is a React library created for the OpenClassrooms P14 project. It p
 Install the package with npm:
 
 ```bash
-npm i @jean/rc-dialog
+npm i @jean_b/rc-dialog
 ```
 
 ## Usage
@@ -29,8 +29,8 @@ npm i @jean/rc-dialog
 Import the necessary components and add the style:
 
 ```JSX
-import { Dialog, DialogTrigger, DialogContent } from "@jean/rc-dialog"
-import "@jean/rc-dialog/dist/style.css"
+import { Dialog, DialogTrigger, DialogContent } from "@jean_b/rc-dialog"
+import "@jean_b/rc-dialog/dist/style.css"
 ```
 
 Manage the open/close state of the dialog:

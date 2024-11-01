@@ -18,7 +18,7 @@ export default defineConfig({
 	build: {
 		lib: {
 			entry: fileURLToPath(new URL("./src/index.ts", import.meta.url)),
-			name: "@jean/rc-dialog",
+			name: "@jean_b/rc-dialog",
 			formats: ["es", "umd"],
 			fileName: "rc-dialog",
 		},
