@@ -4,6 +4,10 @@
 
 <div align="center">
 
+![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)
+![React 18](https://img.shields.io/badge/React-18.0.0-brightgreen)
+![Node 20](https://img.shields.io/badge/node-20.11.0-brightgreen)
+
 [Demo](#)
 
 </div>
