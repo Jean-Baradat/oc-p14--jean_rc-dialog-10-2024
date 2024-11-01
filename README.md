@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="OXC Logo" src="image.jpg" width="700">
+  <img alt="Dialog React" src="https://github.com/user-attachments/assets/91f50838-cce3-4cb4-bfe0-44f84974f9b2">
 </p>
 
 <div align="center">
