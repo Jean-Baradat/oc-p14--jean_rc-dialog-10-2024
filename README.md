@@ -1,8 +1,12 @@
 <p align="center">
-  <img alt="OXC Logo" src="image.jpg" width="700">
+  <img alt="Dialog React" src="https://github.com/user-attachments/assets/91f50838-cce3-4cb4-bfe0-44f84974f9b2">
 </p>
 
 <div align="center">
+
+![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)
+![React 18](https://img.shields.io/badge/React-18.0.0-brightgreen)
+![Node 20](https://img.shields.io/badge/node-20.11.0-brightgreen)
 
 [Demo](#)
 
