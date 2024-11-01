@@ -8,7 +8,7 @@
 ![React 18](https://img.shields.io/badge/React-18.0.0-brightgreen)
 ![Node 20](https://img.shields.io/badge/node-20.11.0-brightgreen)
 
-[Demo](#)
+[Live demo and full doc](https://jean-baradat.github.io/oc-p14--jean_rc-dialog-10-2024/)
 
 </div>
 
@@ -64,7 +64,7 @@ Use the `Dialog`, `DialogTrigger` and `DialogContent` components to create your 
 
 ## Examples
 
-You can find usage examples in the interactive demo
+You can find usage examples in the [interactive demo](https://jean-baradat.github.io/oc-p14--jean_rc-dialog-10-2024/)
 
 ## Features
 
