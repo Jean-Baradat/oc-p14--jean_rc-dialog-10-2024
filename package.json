@@ -2,7 +2,7 @@
 	"name": "@jean_b/rc-dialog",
 	"private": false,
 	"homepage": "https://Jean-Baradat.github.io/oc-p14--jean_rc-dialog-10-2024",
-	"version": "1.0.1",
+	"version": "1.0.0",
 	"author": "Jean Baradat",
 	"license": "MIT",
 	"type": "module",
@@ -27,7 +27,11 @@
 		"preview": "vite preview --config vite.demo.config.ts",
 		"preview:network": "vite preview --config vite.demo.config.ts --host",
 		"predeploy": "npm run build:demo:predeploy",
-		"deploy": "gh-pages -d demo"
+		"deploy": "gh-pages -d demo",
+		"publish:init": "npm publish --access public",
+		"publish:patch": "npm version patch && npm publish",
+		"publish:minor": "npm version minor && npm publish",
+		"publish:major": "npm version major && npm publish"
 	},
 	"files": [
 		"dist",
