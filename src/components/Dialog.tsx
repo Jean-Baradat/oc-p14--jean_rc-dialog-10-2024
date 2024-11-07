@@ -247,6 +247,7 @@ const DialogContent = ({
 				className={animationClassName}
 			>
 				<CloseButton
+					type="button"
 					onClick={() => handleDialog(context?.isOpen, context?.setIsOpen)}
 				>
 					<CloseIcon>

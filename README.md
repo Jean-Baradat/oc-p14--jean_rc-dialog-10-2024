@@ -18,7 +18,7 @@ Dialog React is a React library created for the OpenClassrooms P14 project. It p
 
 ## Installation
 
-Install the package with npm:
+Install the package with `npm`:
 
 ```bash
 npm i @jean_b/rc-dialog
@@ -26,7 +26,7 @@ npm i @jean_b/rc-dialog
 
 ## Usage
 
-Import the necessary components and add the style:
+Import the necessary components:
 
 ```JSX
 import { Dialog, DialogTrigger, DialogContent } from "@jean_b/rc-dialog"
@@ -64,13 +64,6 @@ Use the `Dialog`, `DialogTrigger` and `DialogContent` components to create your 
 ## Examples
 
 You can find usage examples in the [interactive demo](https://jean-baradat.github.io/oc-p14--jean_rc-dialog-10-2024/)
-
-## Features
-
-- Simple dialog with an open button
-- Dialog with custom event
-- Accessibility management with `titleId` and `descriptionId`
-- Customizable events on the trigger (click, hover, etc.)
 
 ## Contribution
 

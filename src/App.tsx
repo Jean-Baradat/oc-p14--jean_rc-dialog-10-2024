@@ -27,10 +27,7 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/shadcn/alert"
 import { siGithub, siLinkedin } from "simple-icons"
 import { AlertCircle, Check, Copy } from "lucide-react"
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter"
-import jsx from "react-syntax-highlighter/dist/esm/languages/prism/jsx"
-import prism from "react-syntax-highlighter/dist/esm/styles/prism/prism"
-
-SyntaxHighlighter.registerLanguage("jsx", jsx)
+import vscDarkPlus from "react-syntax-highlighter/dist/esm/styles/prism/vsc-dark-plus"
 
 // ----------------------------------------------------------------------------------
 const INSTALLATION = "npm i @jean_b/rc-dialog"
@@ -182,10 +179,17 @@ const App = () => {
 							<CardDescription>Install the package with npm</CardDescription>
 						</CardHeader>
 						<CardContent className="flex flex-row items-stretch gap-3 overflow-x-auto pt-1">
-							<div className="w-full min-w-min rounded bg-muted px-5 py-3">
-								<pre className="text-nowrap">
-									<code className="text-sm">{INSTALLATION}</code>
-								</pre>
+							<div className="w-full min-w-min">
+								<SyntaxHighlighter
+									language="bash"
+									style={vscDarkPlus}
+									customStyle={{
+										margin: 0,
+										borderRadius: "4px",
+									}}
+								>
+									{INSTALLATION}
+								</SyntaxHighlighter>
 							</div>
 							<div>
 								<Button
@@ -213,17 +217,16 @@ const App = () => {
 						</CardHeader>
 						<CardContent>
 							<h3 className="mb-1 text-sm font-medium text-muted-foreground">
-								1. Dependencies and style
+								1. Dependencies
 							</h3>
 							<div className="mb-5 flex flex-row items-stretch gap-3 overflow-x-auto p-1">
-								<div className="w-full min-w-min rounded bg-muted px-5 py-3">
+								<div className="w-full min-w-min rounded">
 									<SyntaxHighlighter
 										language="jsx"
-										style={prism}
+										style={vscDarkPlus}
 										customStyle={{
-											background: "transparent",
-											padding: 0,
 											margin: 0,
+											borderRadius: "4px",
 										}}
 									>
 										{CODE1}
@@ -248,14 +251,13 @@ const App = () => {
 								2. State management
 							</h3>
 							<div className="mb-5 flex flex-row items-stretch gap-3 overflow-x-auto p-1">
-								<div className="w-full min-w-min rounded bg-muted px-5 py-3">
+								<div className="w-full min-w-min rounded">
 									<SyntaxHighlighter
 										language="jsx"
-										style={prism}
+										style={vscDarkPlus}
 										customStyle={{
-											background: "transparent",
-											padding: 0,
 											margin: 0,
+											borderRadius: "4px",
 										}}
 									>
 										{CODE2}
@@ -280,14 +282,13 @@ const App = () => {
 								3. Dialog structure
 							</h3>
 							<div className="flex flex-row items-stretch gap-3 overflow-x-auto p-1">
-								<div className="w-full min-w-min rounded bg-muted px-5 py-3">
+								<div className="w-full min-w-min rounded">
 									<SyntaxHighlighter
-										language="jsx"
-										style={prism}
+										language="html"
+										style={vscDarkPlus}
 										customStyle={{
-											background: "transparent",
-											padding: 0,
 											margin: 0,
+											borderRadius: "4px",
 										}}
 									>
 										{CODE3}
@@ -378,17 +379,16 @@ const App = () => {
 										<Card>
 											<CardContent className="pt-6">
 												<h3 className="mb-1 text-sm font-medium text-muted-foreground">
-													1. Dependencies and style
+													1. Dependencies
 												</h3>
 												<div className="mb-5 flex flex-row items-stretch gap-3 overflow-x-auto p-1">
-													<div className="w-full min-w-min rounded bg-muted px-5 py-3">
+													<div className="w-full min-w-min rounded">
 														<SyntaxHighlighter
 															language="jsx"
-															style={prism}
+															style={vscDarkPlus}
 															customStyle={{
-																background: "transparent",
-																padding: 0,
 																margin: 0,
+																borderRadius: "4px",
 															}}
 														>
 															{CODE1}
@@ -413,14 +413,13 @@ const App = () => {
 													2. State management
 												</h3>
 												<div className="mb-5 flex flex-row items-stretch gap-3 overflow-x-auto p-1">
-													<div className="w-full min-w-min rounded bg-muted px-5 py-3">
+													<div className="w-full min-w-min rounded">
 														<SyntaxHighlighter
 															language="jsx"
-															style={prism}
+															style={vscDarkPlus}
 															customStyle={{
-																background: "transparent",
-																padding: 0,
 																margin: 0,
+																borderRadius: "4px",
 															}}
 														>
 															{CODE2}
@@ -454,14 +453,13 @@ const App = () => {
 													</AlertDescription>
 												</Alert>
 												<div className="flex flex-row items-stretch gap-3 overflow-x-auto p-1">
-													<div className="w-full min-w-min rounded bg-muted px-5 py-3">
+													<div className="w-full min-w-min rounded">
 														<SyntaxHighlighter
-															language="jsx"
-															style={prism}
+															language="html"
+															style={vscDarkPlus}
 															customStyle={{
-																background: "transparent",
-																padding: 0,
 																margin: 0,
+																borderRadius: "4px",
 															}}
 														>
 															{CODE4}
@@ -556,7 +554,7 @@ const App = () => {
 										<Card>
 											<CardContent className="pt-6">
 												<h3 className="mb-1 text-sm font-medium text-muted-foreground">
-													1. Dependencies and style
+													1. Dependencies
 												</h3>
 												<Alert className="my-3 bg-blue-100">
 													<AlertCircle className="size-4" />
@@ -568,14 +566,13 @@ const App = () => {
 													</AlertDescription>
 												</Alert>
 												<div className="mb-5 flex flex-row items-stretch gap-3 overflow-x-auto p-1">
-													<div className="w-full min-w-min rounded bg-muted px-5 py-3">
+													<div className="w-full min-w-min rounded">
 														<SyntaxHighlighter
 															language="jsx"
-															style={prism}
+															style={vscDarkPlus}
 															customStyle={{
-																background: "transparent",
-																padding: 0,
 																margin: 0,
+																borderRadius: "4px",
 															}}
 														>
 															{CODE7}
@@ -602,14 +599,13 @@ const App = () => {
 													2. State management
 												</h3>
 												<div className="mb-5 flex flex-row items-stretch gap-3 overflow-x-auto p-1">
-													<div className="w-full min-w-min rounded bg-muted px-5 py-3">
+													<div className="w-full min-w-min rounded">
 														<SyntaxHighlighter
 															language="jsx"
-															style={prism}
+															style={vscDarkPlus}
 															customStyle={{
-																background: "transparent",
-																padding: 0,
 																margin: 0,
+																borderRadius: "4px",
 															}}
 														>
 															{CODE2}
@@ -634,14 +630,13 @@ const App = () => {
 													3. Custom event
 												</h3>
 												<div className="mb-5 flex flex-row items-stretch gap-3 overflow-x-auto p-1">
-													<div className="w-full min-w-min rounded bg-muted px-5 py-3">
+													<div className="w-full min-w-min rounded">
 														<SyntaxHighlighter
 															language="jsx"
-															style={prism}
+															style={vscDarkPlus}
 															customStyle={{
-																background: "transparent",
-																padding: 0,
 																margin: 0,
+																borderRadius: "4px",
 															}}
 														>
 															{CODE5}
@@ -675,15 +670,13 @@ const App = () => {
 													</AlertDescription>
 												</Alert>
 												<div className="flex flex-row items-stretch gap-3 overflow-x-auto p-1">
-													<div className="w-full min-w-min rounded bg-muted px-5 py-3">
+													<div className="w-full min-w-min rounded">
 														<SyntaxHighlighter
-															language="jsx"
-															style={prism}
-															useInlineStyles={true}
+															language="html"
+															style={vscDarkPlus}
 															customStyle={{
-																background: "transparent",
-																padding: 0,
 																margin: 0,
+																borderRadius: "4px",
 															}}
 														>
 															{CODE6}
