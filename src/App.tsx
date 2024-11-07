@@ -27,6 +27,7 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/shadcn/alert"
 import { siGithub, siLinkedin } from "simple-icons"
 import { AlertCircle, Check, Copy } from "lucide-react"
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter"
+import jsx from "react-syntax-highlighter/dist/esm/languages/prism/jsx"
 import vscDarkPlus from "react-syntax-highlighter/dist/esm/styles/prism/vsc-dark-plus"
 
 // ----------------------------------------------------------------------------------
@@ -117,6 +118,8 @@ const App = () => {
 	const [copied, setCopied] = useState("")
 	const [isOpenCustomDialog, setIsOpenCustomDialog] = useState(false)
 	const [isOpenSimpleDialog, setIsOpenSimpleDialog] = useState(false)
+
+	SyntaxHighlighter.registerLanguage("jsx", jsx)
 
 	const copyToClipboard = (text: string, id: string): void => {
 		navigator.clipboard.writeText(text)
