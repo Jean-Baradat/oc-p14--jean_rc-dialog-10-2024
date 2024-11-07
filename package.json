@@ -2,6 +2,17 @@
 	"name": "@jean_b/rc-dialog",
 	"private": false,
 	"homepage": "https://Jean-Baradat.github.io/oc-p14--jean_rc-dialog-10-2024",
+	"keywords": [
+		"React",
+		"dialog",
+		"modal",
+		"react-component",
+		"OpenClassrooms",
+		"popup",
+		"overlay",
+		"react-modal"
+	],
+	"description": "Dialog React is a React library created for the OpenClassrooms P14 project. It provides a simple and customizable dialog component.",
 	"version": "1.1.2",
 	"author": "Jean Baradat",
 	"license": "MIT",

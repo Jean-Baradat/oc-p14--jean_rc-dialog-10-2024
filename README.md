@@ -4,9 +4,10 @@
 
 <div align="center">
 
-![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)
-![React 18](https://img.shields.io/badge/React-18.0.0-brightgreen)
-![Node 20](https://img.shields.io/badge/node-20.11.0-brightgreen)
+![License MIT](https://img.shields.io/badge/license-MIT-red.svg)
+![React 18](https://img.shields.io/badge/React-18.0.0-orange)
+![Node 20](https://img.shields.io/badge/node-20.11.0-yellow)
+![Vite 5](https://img.shields.io/badge/vite-5.4.1-green)
 
 [Live demo and full doc](https://jean-baradat.github.io/oc-p14--jean_rc-dialog-10-2024/)
 
