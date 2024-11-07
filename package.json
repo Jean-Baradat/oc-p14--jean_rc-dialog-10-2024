@@ -13,7 +13,7 @@
 		"react-modal"
 	],
 	"description": "Dialog React is a React library created for the OpenClassrooms P14 project. It provides a simple and customizable dialog component.",
-	"version": "1.1.2",
+	"version": "1.1.3",
 	"author": "Jean Baradat",
 	"license": "MIT",
 	"type": "module",
